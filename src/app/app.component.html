@@ -2,9 +2,17 @@
 
 <div class="layout-row">
   <section class="layout-column sidebar">
-    <filters [filterType]="status" [filterValues]="statuses" (onFilterSelected)="onFilterSelected($event, 'status')"></filters>
-    <filters [filterType]="category" [filterValues]="categories" (onFilterSelected)="onFilterSelected($event, 'category')"></filters>
+    <filters
+      [filterType]="status"
+      [filterValues]="statuses"
+      (onFilterSelected)="onFilterSelected($event, 'status')"
+    ></filters>
+    <filters
+      [filterType]="category"
+      [filterValues]="categories"
+      (onFilterSelected)="onFilterSelected($event, 'category')"
+    ></filters>
   </section>
-
+  <hr />
   <survey-list [surveyList]="filteredList"></survey-list>
 </div>
