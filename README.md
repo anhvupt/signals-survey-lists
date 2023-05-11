@@ -2,6 +2,8 @@
 
 The original idea is from the angular intermediate challenges of Hackerrank. I cloned it to play with the new signals of the v16
 
+[view demo on StackBlitz](https://stackblitz.com/edit/angular-qejqkr?file=src/app/app.component.ts)
+
 ## Application Demo:
 
 ![](https://hrcdn.net/s3_pub/istreet-assets/mCXTOy7HP5xco-3X1m5UFA/survey-list.gif)
