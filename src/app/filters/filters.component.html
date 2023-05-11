@@ -1,10 +1,19 @@
-<ul class="layout-column ml-0 pl-0 filter-list"
-  [attr.data-test-id]="this.filterType === 'status' ? 'status-list' : 'category-list'"
+<ul
+  *ngIf="input() as input"
+  class="layout-column ml-0 pl-0 filter-list"
+  [attr.data-test-id]="
+    input.filterType === 'status' ? 'status-list' : 'category-list'
+  "
 >
-  <span class="section-title">{{this.filterType === 'status' ? 'Status': 'Category'}}</span>
-  <li *ngFor="let filter of filterValues;" class="sidebar-item"
-      [ngClass]="{'active': selectedFilter === filter}"
-      (click)="selected(filter)">
-    <a>{{filter}}</a>
+  <span class="section-title">{{
+    input.filterType === 'status' ? 'Status' : 'Category'
+  }}</span>
+  <li
+    *ngFor="let filter of input.filterValues"
+    class="sidebar-item"
+    [ngClass]="{ active: selectedFilter() === filter }"
+    (click)="selected(filter)"
+  >
+    <a>{{ filter }}</a>
   </li>
 </ul>
