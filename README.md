@@ -1,11 +1,6 @@
 # Survey Lists
 
-## Environment 
-
-- Angular CLI Version: 10.0.4
-- Angular Core Version: 10.0.4
-- Node Version: 12.18.3
-- Default Port: 8000
+The original idea is from the angular intermediate challenges of Hackerrank. I cloned it to play with the new signals of the v16
 
 ## Application Demo:
 
