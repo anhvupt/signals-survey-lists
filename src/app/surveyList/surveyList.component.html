@@ -6,7 +6,7 @@
       <span><b>STATUS</b></span>
       <span><b>LABEL</b></span>
     </li>
-    <ng-container *ngFor="let survey of surveyList">
+    <ng-container *ngFor="let survey of surveyListSignal()">
       <li class="survey-details layout-row slide-up-fade-in">
         <!--       Use below to render list item for each survey object-->
         <span>{{ survey.title }}</span>

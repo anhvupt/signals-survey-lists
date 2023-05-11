@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, signal } from '@angular/core';
 import { Survey } from '../../types/Survey';
 
 @Component({
@@ -7,7 +7,9 @@ import { Survey } from '../../types/Survey';
   styleUrls: ['./surveyList.component.scss'],
 })
 export class SurveyList implements OnInit {
-  @Input() surveyList: Survey[];
-
+  @Input() set surveyList(value: Survey[]) {
+    this.surveyListSignal.set(value);
+  }
+  surveyListSignal = signal([] as Survey[]);
   ngOnInit() {}
 }
