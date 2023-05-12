@@ -1,11 +1,10 @@
-import {TestBed, async, ComponentFixture} from '@angular/core/testing';
-import {AppComponent} from './app.component';
-import {ChangeDetectionStrategy, CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
-import {Filters} from "./filters/filters.component";
-import {SurveyList} from "./surveyList/surveyList.component";
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { AppComponent } from './app.component';
+import { ChangeDetectionStrategy, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Filters } from './filters/filters.component';
+import { SurveyList } from './surveyList/surveyList.component';
 
 describe('AppComponent', () => {
-  let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
   let compiled;
 
@@ -18,15 +17,11 @@ describe('AppComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent,
-        Filters,
-        SurveyList
-      ],
-      schemas : [CUSTOM_ELEMENTS_SCHEMA]
+      declarations: [AppComponent, Filters, SurveyList],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
       .overrideComponent(AppComponent, {
-        set: {changeDetection: ChangeDetectionStrategy.Default}
+        set: { changeDetection: ChangeDetectionStrategy.Default },
       })
       .compileComponents();
   }));
